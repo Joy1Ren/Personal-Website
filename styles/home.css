@@ -4,14 +4,26 @@
     margin: auto;
     border: solid rgb(228, 227, 242) 5px;
 }
+a{
+    text-decoration: none;
+}
+.box-container{
+    display: flex;
+    width: 40in;
+    margin-top: 2in auto;
+    align-items: center;
+}
 .box{
+    flex: -1.5 1 auto;
     background: rgba(172, 169, 213, 0.5);
+    width: 1in;
     border-radius: 5px;
     border: solid rgb(78, 77, 97) 1px;
-    padding: 10px;
-    width: 3in;
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
     transition: 0.2s ease-in-out;
-    display: flex;
+    
 }
 .box:hover{
     transform: scale(1.05);
