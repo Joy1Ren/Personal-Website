@@ -1,0 +1,27 @@
+#me{
+    width: 40%;
+    display: block;
+    margin: auto;
+    border: solid rgb(228, 227, 242) 5px;
+}
+.box{
+    background: rgba(172, 169, 213, 0.5);
+    border-radius: 5px;
+    border: solid rgb(78, 77, 97) 1px;
+    padding: 10px;
+    width: 3in;
+    transition: 0.2s ease-in-out;
+    display: flex;
+}
+.box:hover{
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    background-color: rgb(200, 169, 213)
+}
+.my_Intro{
+    display: inline-block;
+    padding: 1in; /*fix margins*/
+}
+.my_UBL{
+    margin: 80px;/*fix margins*/
+}

@@ -1,0 +1,17 @@
+h1{
+    color: #170429;
+    text-align: center;
+}
+.describe{
+    color:rgb(39, 17, 59);
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 18px;
+    width: 1000px;
+}
+.intro{
+    margin: 0 auto;
+    margin-left: 0; 
+    margin-right: 0;
+
+}
