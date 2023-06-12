@@ -13,5 +13,26 @@ h1{
     margin: 0 auto;
     margin-left: 0; 
     margin-right: 0;
-
 }
+
+.firstColumn {
+    float: left;
+    padding: 0 10px 0 0;
+    width: 30%;
+  }
+  .secondColumn {
+    float: right;
+    padding: 0 10px 0 0;
+    width: 50%;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .columnTitle{
+    color: rgb(96, 34, 167);
+    text-align: center;
+  }

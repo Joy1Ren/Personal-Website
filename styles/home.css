@@ -16,7 +16,8 @@ a{
 .box{
     flex: -1.5 1 auto;
     background: rgba(172, 169, 213, 0.5);
-    width: 1in;
+    width: 2in;
+    height: 0.6in;
     border-radius: 5px;
     border: solid rgb(78, 77, 97) 1px;
     margin: 10px;
