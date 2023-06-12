@@ -16,7 +16,55 @@
     <div class="top">
         <p class="describe">
             Ever since just a young girl, I have always loved cooking and baking. Throughout the years, I have tried different recipes and developed some of my own. Here, I share the tips and tricks I have discovered to make the best desserts, dishes, and beyond!
+            </br> </br>
+            Please add your favorite recipe here! </br></br>
+            <div class="row">
+                <div class="firstColumn">
+                    Add your ingredients: <input type= "text" id="inputI"><button onclick="addUserInput(event)" id="butI">Add</button>
+                    <h2 class="columnTitle"> Ingredients <h2/class>
+                    <ul id="Iul">
+
+                    </ul>
+                </div>
+                <div class="secondColumn">
+                    Add your directions: <input type= "text" id="inputD"><button onclick="addUserInput(event)" id="butD">Add</button>
+                    <h2 class="columnTitle"> Directions <h2/class>
+                    <ol id="Dol">
+
+                    </ol>
+                </div>
+              </div>
         </p>
     </div>
+
+    <script>
+        //buttons add ingredients/directions to corresponding column list 
+        function addToIList(content){
+            let itemElm = document.createElement('li');
+            itemElm.textContent = content;
+            let listElm = document.getElementById('Iul');
+            listElm.appendChild(itemElm);
+        }
+        function addToDList(content){
+            let itemElm = document.createElement('li');
+            itemElm.textContent = content;
+            let listElm = document.getElementById('Dol');
+            listElm.appendChild(itemElm);
+        }
+        function addUserInput(event){
+            var inputI = document.getElementById('inputI');
+            var inputD = document.getElementById('inputD');
+            var butI = document.getElementById("butI");
+            console.log(event.target)
+            if (event.target == butI){
+                addToIList(inputI.value);
+                document.getElementById("inputI").value = "";
+            }
+            if (event.target == butD){
+                addToDList(inputD.value);
+                document.getElementById("inputD").value = "";
+            }
+        }
+    </script>
 </body>
 </html>
