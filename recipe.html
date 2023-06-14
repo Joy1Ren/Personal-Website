@@ -10,29 +10,45 @@
         html{background: #d7bef370}
     </style>
 </head>
-<a href= "index.html"> <img src="homeIcon.png" height = 30></a>
+<a href= "index.html"> <img src="homeIcon.png" height = 30 style="position:fixed"></a>
 <body>
     <h1>Joy's Jubilous Recipes</h1>
     <div class="top">
         <p class="describe">
             Ever since just a young girl, I have always loved cooking and baking. Throughout the years, I have tried different recipes and developed some of my own. Here, I share the tips and tricks I have discovered to make the best desserts, dishes, and beyond!
             </br> </br>
-            Please add your favorite recipe here! </br></br>
+            Please add your favorite recipe too! </br></br>
+        </p>
+        <p>
             <div class="row">
                 <div class="firstColumn">
                     Add your ingredients: <input type= "text" id="inputI"><button onclick="addUserInput(event)" id="butI">Add</button>
                     <h2 class="columnTitle"> Ingredients <h2/class>
-                    <ul id="Iul">
-
+                    <ul id="Iul">                        
                     </ul>
                 </div>
                 <div class="secondColumn">
-                    Add your directions: <input type= "text" id="inputD"><button onclick="addUserInput(event)" id="butD">Add</button>
+                    <div id = "addDirections">
+                        Add your directions: <input type= "text" id="inputD"><button onclick="addUserInput(event)" id="butD">Add</button>
+                    </div>
                     <h2 class="columnTitle"> Directions <h2/class>
                     <ol id="Dol">
 
                     </ol>
                 </div>
+              </div>
+              <div class = "breakBar"></div>
+        </p>
+        <p>
+              <div class="myRecipes">
+                <a href = "Recipe/cheesecake.html"></aref><img class = "imageRecipe" src="Recipe/cheesecake.jpg" alt = "cheesecake" title = "cheesecake"></a>
+                <img class = "imageRecipe" src="Recipe/cat_bao.jpg" alt = "cat bao" title = "cat bao">
+                <img class = "imageRecipe" src="Recipe/chocolate_cake.JPG" alt = "chocolate cake" title = "chocolate cake">
+                <img class = "imageRecipe" src="Recipe/nashville_sandwich.jpg" alt = "Nashville sandwich" title = "Naschville sandwich">
+                <img class = "imageRecipe" src="Recipe/peanut_bar.jpg" alt = "peanut bar" title = "peanut bar">
+                <img class = "imageRecipe" src="Recipe/strawberry_cake.JPG" alt = "strawberry cake" title = "strawberry cake">
+                <img class = "imageRecipe" src="Recipe/twinky_cake.JPG" alt = "Twinky's cake" title = "Twinky's cake">
+                <img class = "imageRecipe" src="Recipe/vanilla_cupcake.JPG" alt = "vanilla cupcake" title = "vanilla cupcake">
               </div>
         </p>
     </div>
@@ -41,15 +57,26 @@
         //buttons add ingredients/directions to corresponding column list 
         function addToIList(content){
             let itemElm = document.createElement('li');
-            itemElm.textContent = content;
+            itemElm.textContent = content + "\u2001";
             let listElm = document.getElementById('Iul');
             listElm.appendChild(itemElm);
+
+            var deleteButton=document.createElement("button");
+            deleteButton.innerText="X";
+	        deleteButton.className="delete";
+            itemElm.appendChild(deleteButton);
         }
         function addToDList(content){
             let itemElm = document.createElement('li');
-            itemElm.textContent = content;
+            itemElm.textContent = content + "\u2001";
             let listElm = document.getElementById('Dol');
             listElm.appendChild(itemElm);
+            
+            //listElm.append(span);
+            var deleteButton=document.createElement("button");
+            deleteButton.innerText="X";
+	        deleteButton.className="delete";
+            itemElm.appendChild(deleteButton);
         }
         function addUserInput(event){
             var inputI = document.getElementById('inputI');
@@ -65,6 +92,23 @@
                 document.getElementById("inputD").value = "";
             }
         }
+
+        //delete buttons
+        var list = document.getElementById('Iul');
+        list.addEventListener('click', event => {
+            if (event.target.className == 'delete') {
+                var listItem=event.target.parentNode;
+                document.getElementById('Iul').removeChild(listItem);
+            }
+        });
+
+        var list = document.getElementById('Dol');
+        list.addEventListener('click', event => {
+            if (event.target.className == 'delete') {
+                var listItem=event.target.parentNode;
+                document.getElementById('Dol').removeChild(listItem);
+            }
+        });
     </script>
 </body>
 </html>
