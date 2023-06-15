@@ -5,6 +5,10 @@ h1{
     color: #170429;
     text-align: center;
 }
+h2{
+  text-align: center;
+  color:rgb(47, 0, 42);
+}
 .describe{
     color:rgb(39, 17, 59);
     text-align: left;
@@ -34,6 +38,11 @@ h1{
   border-style: solid;
   border-color:rgb(45, 3, 64);
   height: 200px;
+}
+.specificImageRecipe{
+  margin: 30px auto 50px auto;
+  height:300px;
+  display: block;
 }
 .imageRecipe:hover{
   filter: brightness(120%);
@@ -88,6 +97,7 @@ li{
   }
   ul li{
     list-style: none;
+    text-align: left;
     margin-bottom: 5px;
   }
   ol li{
@@ -95,6 +105,10 @@ li{
     word-wrap: break-word;
   }
 
+/* to create break in list */
+.emptyBullet::before{
+  content: none;
+}
   /* close button */
   .close {
     position: absolute;
