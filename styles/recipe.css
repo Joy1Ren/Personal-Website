@@ -49,6 +49,10 @@ h2{
   display: text;
 }
 
+/* image in specific recipe page does not glow up when hovered over */
+.specificImageRecipe:hover{
+  filter: brightness(100%);
+}
 .firstColumn {
   margin-left: 100px;  
   float: left;
